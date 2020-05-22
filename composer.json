@@ -1,0 +1,21 @@
+{
+"name": "Nopadi MF",
+"description": "Nopadi Micro-Framework para desenvolvimento web progressivo com PHP",
+"license": "MIT",
+"authors": [
+{
+"name": "Paulo Leonardo da Silva Cassimiro",
+"email": "pauloleonardo.rio@gmail.com"
+}
+],
+"minimum-stability": "dev"
+},
+"require": {
+"PHP":">=7.0.0",
+"phpunit/phpunit": "^6.5"
+},
+"scripts":{
+"nopadi server":"php -S localhost:8080 public/index.php",
+"tests":"vendor/bin/phpunit test/"
+}
+}
