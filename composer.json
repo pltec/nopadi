@@ -8,8 +8,7 @@
 "email": "pauloleonardo.rio@gmail.com"
 }
 ],
-"minimum-stability": "dev"
-},
+"minimum-stability": "dev",
 "require": {
 "PHP":">=7.0.0",
 "phpunit/phpunit": "^6.5"
