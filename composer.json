@@ -1,11 +1,17 @@
 {
     "name": "nopadi/mf",
     "type": "project",
-    "description": "Nopadi",
+    "version":"0.1",
+    "description": "Nopadi Microfrawork para desenvolvimento rápido",
     "keywords": [
         "framework",
         "nopadi"
     ],
+    "authors":[{
+       "name":"Paulo Leonardo da Silva Cassimiro",
+	"email":"pauloleonardo.rio@gmail.com",
+	 "role":"creator"
+    }],
     "license": "MIT",
     "require": {
 	    "php": "^7.0.0",
