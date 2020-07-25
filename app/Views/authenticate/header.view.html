@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="{{NP_LANG}}">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="{{NP_CHARSET}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Nopadi CSS -->
+    <link rel="stylesheet" href="{{asset('css/nopadi/nopadi.css')}}">
+	<script src="{{asset('js/vue/vue.js')}}"></script>
+    <script src="{{asset('js/vue/axios.min.js')}}"></script>
+	<script src="{{asset('js/script.js')}}"></script>
+    <title>Login</title>
+  </head>
+<body>
+<style>
+#myTop{display:none;}
+@media (max-width:992px) and (min-width:400px),(max-width:400px) and (min-width:50px){
+.app-content{padding-top:65px !important;}
+#myTop{display:block !important;}
+.site{display:none !important;}
+}
+p > .icon{position:relative;top:5px;}
+h3 > .icon{position:relative;top:5px;}
+.app-content{
+ background-image:url('img/fundo.png')
+}
+#myTop{
+ background-image:url('img/fundo2.png');
+}
+</style>
+<body class="row tema-site">
+
+<nav class="sidebar bar-block collapse card" style="z-index:3;width:250px;" id="mySidebar">
+  <div class="fundo">
+         <a class="bar-item button border-bottom" onclick="myAccordion('perfil')" href="javascript:void(0)">
+		 <div class="floating-small">
+          <img src="{{asset('img/html5.png')}}" style="width:100%;max-width:100px" alt="Avatar">
+		  </div> Olá, <b>{{$user->first}}!</b><i class="icon right">arrow_drop_down</i></a>
+          <div id="perfil" class="hide animate-opacity border-bottom">
+           <a class="bar-item button btn-route" id="perfil">
+           <i class="icon">account_circle</i><span>Meu perfil</span></a>
+		   <a to="logout" class="bar-item button">
+           <i class="icon text-red">adjust</i><span>Sair</span></a>
+          </div>
+		
+     <div>
+    <a class="bar-item button" onclick="myAccordion('demo')" href="javascript:void(0)"><i class="icon">group</i>Usuários<i class="icon right">arrow_drop_down</i></a>
+    <div id="demo" class="hide animate-opacity">
+	  <a class="bar-item button" href="#"><i class="icon">list</i> Todos</a>
+      <a class="bar-item button btn-route" href="#" id="create"><i class="icon">person_add</i> Adicionar</a>
+      
+      </div>
+  </div>
+   </div>
+</nav>
+
+<div class="overlay hide-large animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="main" style="margin-left:250px;">
+
+<div id="myTop" class="container top large bar display-container">
+  <p class="bar-item button"><i class="icon hide-large" onclick="w3_open()">menu</i></p>
+  <p class="bar-item button"><i class="icon hide-large">notifications</i></p>
+  <a href="index.html" class="bar-item display-topright padding"><img src="img/logo.png" style="width:130px;"></a>
+  <div id="myIntro" class="hide">
+  
+  </div>
+</div>
+<div class="container route-content app-content">
+<div class="progress" style="height:10px;display:none;">
+
+<div class="indeterminate green"></div></div>
+</div>
+
+<footer class="container theme" style="padding:32px">
+  <p>Por: Yeba</p>
+</footer>
+     
+</div>
+
+<script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTop").classList.add("card-4", "animate-opacity","border-bottom");
+    document.getElementById("myIntro").classList.add("show-inline-block");
+  } else {
+    document.getElementById("myIntro").classList.remove("show-inline-block");
+    document.getElementById("myTop").classList.remove("card-4", "animate-opacity");
+  }
+}
+
+// Accordions
+function myAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("show") == -1) {
+    x.className += " show";
+    x.previousElementSibling.className += " theme";
+  } else { 
+    x.className = x.className.replace("show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" theme", "");
+  }
+}
+</script>
+  </body>
+	   </html>
