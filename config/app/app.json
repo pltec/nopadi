@@ -1,0 +1,15 @@
+{
+    "name":"Nopadi",
+    "description": "Nopadi Microframework",
+    "author":"Paulo Leonardo",
+    "status": "dev",
+	"mode": "dev",
+	"version": "0.1",
+	"url": "nopadi.com",
+	"logs": "on",
+    "timezone": "America/Sao_Paulo",
+    "lang": "pt-br",
+	"charset":"utf-8"
+}
+
+

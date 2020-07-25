@@ -1,16 +1,25 @@
 {
     "name": "nopadi/mf",
-    "description": "Nopadi Micro-Framework",
-    "authors": [
-        {
-            "name": "Paulo Leonardo da Silva Cassimiro",
-            "email": "pauloleonardo.rio@gmail.com"
-        }
+    "type": "project",
+    "description": "Nopadi",
+    "keywords": [
+        "framework",
+        "nopadi"
     ],
-    "require": { 
-	           "PHP":">=7.0.0" 
-			   },
-	"scripts":{
-              "nopadi":"php -S localhost:8080 public/index.php"
-              }
+    "license": "MIT",
+    "require": {
+	    "php": "^7.0.0",
+		"phpmailer/phpmailer": "~6.1"
+    },
+    "scripts": {
+	   "nopadi-server":"php -S localhost:8080 public/index.php",
+	   "nopadi-8000":"php -S 0.0.0.0:8000 public/index.php",
+	   "nopadi":"php nopadi/CLI/nopadi.php"
+	},
+	"autoload" : {
+	    "psr-4":{
+		  "Nopadi\\":"nopadi/",
+		  "App\\":"app/"
+		}
+    }
 }

@@ -1,0 +1,15 @@
+{
+   "styles":{
+	  "nopadi":"nopadi/nopadi"
+	},
+	"scripts":{
+	},
+	"hello": {
+	   "info":"panel leftbar padding pale-blue border-blue animate-right",
+	   "success":"panel leftbar padding pale-green border-green animate-right",
+	   "danger":"panel leftbar padding pale-red border-red animate-right",
+	   "warning":"panel leftbar padding pale-yellow border-orange animate-right"
+	}
+}
+
+
