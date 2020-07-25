@@ -2,6 +2,7 @@
     "name": "nopadi/mf",
     "type": "project",
     "version":"0.1",
+    "minimum-stability":"dev",
     "description": "Nopadi Microfrawork para desenvolvimento rápido",
     "keywords": [
         "framework",
